@@ -1,6 +1,6 @@
 import { axiosClassic } from 'api/interseptors'
 
-import { IGenre } from '@/shared/types/movie.types'
+import { IGenre, IMovie } from '@/shared/types/movie.types'
 
 import { getMoviesUrl } from '@/config/api.config'
 
@@ -13,5 +13,12 @@ export const MovieService = {
 				  }
 				: {},
 		})
+	},
+
+  async getMostPopularMovies() {
+		const { data: movies } = await axiosClassic.get<IMovie[]>(
+			getMoviesUrl('/most-popular')
+		)
+		return movies
 	},
 }
