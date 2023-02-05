@@ -77,6 +77,8 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/forms'),
+		require('@tailwindcss/aspect-ratio'),
     plugin(({addComponents, theme, addUtilities}) => {
       addComponents({
         '.btn-primary': {
@@ -100,7 +102,7 @@ module.exports = {
         },
         '.air-block': {
           borderRadius: theme('borderRadius.layout'),
-          backgroundColor: theme('color.gray.950'),
+          backgroundColor: theme('colors.gray.950'),
           color: theme('colors.white'),
           boxShadow: theme('boxShadow.lg'),
         }
