@@ -1,4 +1,4 @@
-import Heading from '@/components/ui/heading/heading'
+import Heading from '@/components/ui/heading/Heading'
 import Meta from '@/utils/meta/Meta'
 import React from 'react'
 
