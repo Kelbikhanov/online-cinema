@@ -8,6 +8,7 @@ import { FC, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import Button from "@/components/ui/form-elements/Button";
 import AuthFields from "./AuthFields";
+import { useActions } from "@/hooks/useActions";
 
 const Auth: FC = () => {
   useAuthRedirect();
@@ -22,8 +23,7 @@ const Auth: FC = () => {
     mode: "onChange",
   });
 
-  const login = (data: any) => { console.log(data, 'login')};
-  const register = (data: any) => {console.log(data, 'register')};
+  const {login, register} = useActions()
 
   const onSubmit: SubmitHandler<IAuthInput> = (data) => {
     if (type === "login") login(data);
