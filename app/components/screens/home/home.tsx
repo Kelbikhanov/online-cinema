@@ -1,7 +1,6 @@
 import { FC } from 'react'
 
-import Heading from '@/components/ui/heading/heading'
-
+import Heading from '@/components/ui/heading/Heading'
 import Meta from '@/utils/meta/Meta'
 
 import { IHome } from './home.interface'
